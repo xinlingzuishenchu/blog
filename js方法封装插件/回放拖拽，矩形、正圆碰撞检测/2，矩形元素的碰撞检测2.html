@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1 { position: absolute; width: 100px; height: 100px; background: red;  }
+#div2 { position: absolute; width: 100px; height: 100px; background: blue; left: 500px; top: 240px;  }
+</style>
+</head>
+
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+
+
+</body>
+</html>
+
+<script>
+
+
+
+
+
+// var oDiv1 = document.getElementById('div1');
+// var oDiv2 = document.getElementById('div2');
+
+// drag( oDiv1 , oDiv2 );
+// drag( oDiv2 , oDiv1 );
+
+// function drag( obj1 , obj2 ){
+        
+//     obj1.onmousedown = function( ev ){
+        
+//         var ev = ev || event;
+//         var disX = ev.clientX - this.offsetLeft;
+//         var disY = ev.clientY - this.offsetTop;
+        
+//         obj2.color = getComputedStyle( obj2 )['backgroundColor'];
+    
+//         if( obj1.setCapture ) obj1.setCapture();
+    
+//         document.onmousemove = function( ev ){
+            
+//             var ev = ev || event;
+            
+//             var l = ev.clientX - disX;
+//             var t = ev.clientY - disY;
+                  
+//             obj1.style.left = l + 'px';
+//             obj1.style.top = t + 'px';
+            
+//             if( crash( obj1, obj2 ) ){
+//                 obj2.style.background = 'orange';    
+//             }else{
+//                 obj2.style.background = obj2.color;    
+//             }
+            
+            
+//         };
+        
+//         document.onmouseup = function(){
+//             if( obj1.releaseCapture ) obj1.releaseCapture();        
+//             document.onmousemove = document.onmouseup = null;    
+//         };
+        
+//         return false;
+//     };
+        
+// }
+
+
+// function crash( obj1, obj2 ){
+    
+//     var L1 = obj1.offsetLeft;
+//     var R1 = obj1.offsetLeft + obj1.offsetWidth;
+//     var T1 = obj1.offsetTop;
+//     var B1 = obj1.offsetTop + obj1.offsetHeight;
+    
+//     var L2 = obj2.offsetLeft;
+//     var R2 = obj2.offsetLeft + obj2.offsetWidth;
+//     var T2 = obj2.offsetTop;
+//     var B2 = obj2.offsetTop + obj2.offsetHeight;
+    
+//     if( R1 < L2 || L1 > R2 || B1 < T2 || T1 > B2 )return false;
+    
+//     return true;    
+// }
+
+
+/*
+
+碰撞检测的原理： 
+
+    不直接检测两个元素是不是已经碰在一起了，而是检测两个元素是不是有可能没有碰到一起，因为这样检测起来更容易。
+
+
+*/
+
+
+
+</script>

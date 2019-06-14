@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NumberConversion</title>
+</head>
+<body>
+    <div> 
+        <input type="text" id="sourcetxt" /><br />
+        <input type="button" onclick="NumConvert()" id="converbtn"  value="数字大写转换"/> <br />
+        <input type="text" id="targettxt" />
+    </div>
+    
+</body>
+<script src="js/digital.js"></script>
+<script>
+        function NumConvert() {
+            try {
+                var numtxt = document.getElementById("sourcetxt").value;
+                var result = Arabia_To_SimplifiedChinese(numtxt);
+                document.getElementById("targettxt").value = result;
+
+            } catch (e) {
+                alert(e);
+            }
+        }
+</script>
+</html>

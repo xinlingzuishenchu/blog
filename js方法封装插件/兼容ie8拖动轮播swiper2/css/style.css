@@ -1,0 +1,122 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:microsoft yahei,'黑体';
+}
+#youdaoBanner{
+	margin-top:20px;
+	height:326px;
+	position:relative;
+}
+#youdaoBanner .swiper-slide{
+	width: 480px;
+	padding:0 30px;
+	position:relative;
+}
+#youdaoBanner .swiper-slide .bg{
+	height: 326px;
+	background-repeat: no-repeat;
+    background-position: center top;
+	position:relative;
+	overflow:hidden;
+	}
+#youdaoBanner .swiper-slide .white-top{
+	background:url(../images/white-top.png);
+	position:absolute;
+	z-index:900;
+	top:0;
+	left:0;
+	width:100%;
+	height:8px;
+}
+#youdaoBanner .swiper-slide .white-bottom{
+	background:url(../images/white-bottom.png);
+	position:absolute;
+	z-index:900;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:8px;}
+#youdaoBanner .bg .black-mask{
+	width:480px;
+	height:326px;
+	position:absolute;
+	z-index:1;
+	top:0;
+	left:0;
+	background:url(../images/black-mask.png);}
+#youdaoBanner .bg:hover .black-mask{
+	display:none;
+}
+#youdaoBanner .swiper-button-prev,#youdaoBanner .swiper-button-next{
+	position:absolute;
+	z-index:999;
+	top:50%;
+	left:10px;
+	margin-top:-30px;
+	width: 60px;
+    height: 60px;
+	background:url(../images/swiper-btn.png);
+	cursor:pointer;
+	display:none;
+}
+#youdaoBanner .swiper-button-next{
+	background-position:0 -60px;
+	left:auto;
+	right:10px;}
+#youdaoBanner:hover .swiper-button-prev,#youdaoBanner:hover .swiper-button-next{
+	display:block;
+}
+#youdaoBanner .slide1 .bg{background-image:url(../uploads/img01.png);}
+#youdaoBanner .slide2 .bg{background-image:url(../uploads/img02.png);}	
+#youdaoBanner .slide3 .bg{background-image:url(../uploads/img03.png);}	
+#youdaoBanner .slide4 .bg{background-image:url(../uploads/img04.png);}	
+#youdaoBanner .slide5 .bg{background-image:url(../uploads/img05.png);}	
+#youdaoBanner .slide6 .bg{background-image:url(../uploads/img06.png);}	
+
+#youdaoBanner .swiper-slide .bg:hover{
+	background: url(../images/fire.png) #fc6760 340px 210px no-repeat;
+	}
+
+#youdaoBanner .info{
+	position: absolute;
+	padding:30px;
+	z-index:999;
+    bottom: -149px;
+	color:#fff;
+	font-size:14px;
+	padding-top:30px;
+}
+#youdaoBanner .info .date{
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+#youdaoBanner .info h3{
+	margin-bottom: 18px;
+}
+#youdaoBanner .info h3 a{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+	text-decoration:none;
+}
+#youdaoBanner .info p{
+	text-indent:2em;
+}
+#youdaoBanner .info .btn{
+	margin-top: 40px;
+	display:block;
+    color: #fff;
+    font-size: 16px;
+	text-align:center;
+	width:106px;
+	height:42px;
+    line-height: 40px;
+	text-decoration:none;
+	background:url(../images/link_bg.png) no-repeat;
+}
+#youdaoBanner .info .btn:hover{
+	
+	color:#000;
+	background:url(../images/link_bg.png) no-repeat left -42px;
+}

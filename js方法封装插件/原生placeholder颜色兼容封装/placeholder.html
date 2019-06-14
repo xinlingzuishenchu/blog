@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+
+		</style>
+		
+	</head>
+	<body>
+	<input type="text" placeholder="这里开始">
+	</body>
+</html>
+<script type="text/javascript">
+
+	var inp = document.getElementsByTagName("input");
+	placeholder(inp,"red");
+
+
+	//placeholder效果封装(input,red)
+
+	function placeholder(nodes,pcolor) {
+		if(nodes.length && ("placeholder" in document.createElement("input"))){
+			console.log("1111111111")
+			for(i=0;i< nodes.length;i++){
+				var self = nodes[i],placeholder = self.getAttribute('placeholder') || '';
+			self.onfocus = function(){
+				if(self.value == placeholder){
+					self.value = '';
+					self.style.color = "";
+				}
+			}
+			self.onblur = function(){
+				console.log("三家分晋可靠估计人")
+				if(self.value == ''){
+
+					self.value = placeholder;
+					self.style.color = pcolor;
+				}
+			}
+			self.value = placeholder;
+			self.style.color = pcolor;
+		}
+	}
+	}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+

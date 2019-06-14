@@ -1,0 +1,50 @@
+# Site settings
+title: 闫肃的博客
+email: suyan0830@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  闫肃的博客
+baseurl: /blog_demo # the subpath of your site, e.g. /blog/
+url: http://yansu.org # the base hostname & protocol for your site
+rss_url: /pages/feed.xml
+author: Su Yan
+
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+recent_num: 20
+
+# Social account
+twitter: masonsuyan
+weibo: suyan0830
+github: suyan
+instagram: suyan0830
+linkedin: suyan0830
+
+# avatar and Favicon
+avatar: https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1522736786&di=75731ea9be36dc28aec148d4438cb577&src=http%3A%2F%2Fwww.duoxinqi.com%2Fimages%2F2012%2F03%2F20120327NANIFUFU11.jpg
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
+
+# disqus config
+disqus:
+  shortname: suyan-zh
+
+# google analytics config
+ga:
+  id: UA-54767140-1
+  url: yansu.org
+
+# Build settings
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+# gems:
+#   - jekyll-sitemap
+#   - jekyll-seo-tag
+#   - jekyll-feed
+

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1 { position: absolute; width: 200px; height: 200px; background: red;  }
+#div2 { position: absolute; width: 200px; height: 200px; background: blue; left: 200px; top: 240px;  }
+</style>
+</head>
+
+<body>
+<span>乱七八糟</span>
+<div id="div1">javascript</div>
+<div id="div2"></div>
+
+</body>
+</html>
+
+<script>
+
+var oDiv = document.getElementById('div1');
+
+oDiv.onmousedown = function( ev ){
+    
+    var ev = ev || event;
+    var disX = ev.clientX - this.offsetLeft;
+    var disY = ev.clientY - this.offsetTop;
+
+    if( oDiv.setCapture ) oDiv.setCapture();
+
+    document.onmousemove = function( ev ){
+        
+        var ev = ev || event;
+        
+        var l = ev.clientX - disX;
+        var t = ev.clientY - disY;
+        
+        oDiv.style.left = l + 'px';
+        oDiv.style.top = t + 'px';
+        oDiv.style.cursor = 'move';
+        
+    };
+    
+    document.onmouseup = function(){
+        if( oDiv.releaseCapture ) oDiv.releaseCapture();        
+        document.onmousemove = document.onmouseup = null;    
+    };
+    
+    return false;
+};
+
+
+/*
+
+拖拽的三大事件：
+
+    准备拖动： onmousedown 
+    
+    开始拖动 ： onmousemove 
+    
+    拖动结束 ： onmouseup 
+
+
+选中文字再拖动，会触发浏览器的默认行为，导致bug：
+
+    解决办法：阻止浏览器的默认行为（在ie7及以下浏览器解决不了这个bug）。
+    
+
+
+*/
+
+</script>
+

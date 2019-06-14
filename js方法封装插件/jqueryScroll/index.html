@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轻量级自定义滚动条</title>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/scroll.min.js"></script>
+		<style>
+			body{margin: 0;}
+			.Prompt{width: 90%;margin: 0 auto;text-align: center;}
+			.centent{width: 23%;margin: 20px 1%;background-color: wheat;float: left;}
+			.style1{width: 100%;height: 200px;margin:0;overflow-y: auto;}
+			.style1 ul{margin: 0;}
+			.style1 li{line-height: 50px;border-bottom: solid 2px #fff;}
+			.style2{width: 100%;margin:0;height: 200px;overflow-x: auto;}
+			.style2 ul{width:200%;padding: 0;margin: 0;}
+			.style2 ul li{width:100%;line-height: 50px;border-bottom: solid 2px #116644;text-align: center;}
+		</style>
+	</head>
+	<body>
+		<!--单个div的Y轴滚动-->
+		<div class="centent">
+			<div class="style1" id="scrollbox">
+				<ul>
+					<li>单个div的Y轴滚动</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+				</ul>
+			</div>
+		</div>
+		<!--单个div的Y轴滚动end-->
+		
+		<!--多个div的Y轴滚动-->
+		<div class="centent">
+			<div class="style1 scrollbox">
+				<ul>
+					<li>多个div的Y轴滚动</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+				</ul>
+			</div>
+		</div>
+		<!--多个div的Y轴滚动end-->
+		
+		<!--多个div的X轴滚动-->
+		<div class="centent">
+			<div class="style2 scrollXbox">
+				<ul>
+					<li>多个div的X轴滚动</li>
+					<li>MUNSE</li>
+				</ul>
+			</div>
+		</div>
+		<!--多个div的X轴滚动end-->
+		
+		<!--多个div的XY轴滚动-->
+		<div class="centent">
+			<div class="style2 scrollXY">
+				<ul>
+					<li>多个div的XY轴滚动</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+					<li>MUNSE</li>
+				</ul>
+			</div>
+		</div>
+		<!--多个div的XY轴滚动end-->
+		<div class="Prompt">说明：DIY简约风格，轻量级的自定义美化滚动条插件，具体应用到项目的时候建议测试一下其兼容性、可行性。目前版本没有滚动的控制按钮，自定义样式可直接在scroll.min.js的相应事件下修改CSS。</div>
+	</body>
+</html>
+<script type="text/javascript">
+	scrollY("#scrollbox");		//单个Y轴
+	scrollsY(".scrollbox");		//多个Y轴
+	scrollsX(".scrollXbox");	//多个X轴
+	scrollsXY(".scrollXY");	//多个X轴
+</script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<link rel='stylesheet' href='css/owl.carousel.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="htmleaf-container">
+		<div class="container">
+			<div class="mhn-slide owl-carousel">
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?paper">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?fire">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?nature">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?video">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?hiking">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?future">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?music">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?money">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?happiness">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?nepal">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?love">
+						
+					</div>
+				</div>
+				<div class="mhn-item">
+					<div class="mhn-inner">
+						<img src="https://source.unsplash.com/600x400/?sports">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js'></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.mhn-slide').owlCarousel({
+				nav:true,
+				//loop:true,
+				slideBy:'page',
+				rewind:false,
+				responsive:{
+					0:{items:1},
+					480:{items:2},
+					600:{items:3},
+					1000:{items:4}
+				},
+				smartSpeed:70,
+				onInitialized:function(e){
+					$(e.target).find('img').each(function(){
+						if(this.complete){
+							$(this).closest('.mhn-inner').find('.loader-circle').hide();
+							$(this).closest('.mhn-inner').find('.mhn-img').css('background-image','url('+$(e.target).attr('src')+')');
+						}else{
+							$(this).bind('load',function(e){
+								$(e.target).closest('.mhn-inner').find('.loader-circle').hide();
+								$(e.target).closest('.mhn-inner').find('.mhn-img').css('background-image','url('+$(e.target).attr('src')+')');
+							});
+						}
+					});
+				},
+				navText:['<svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>','<svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>']
+			});
+		});
+	</script>
+</body>
+</html>

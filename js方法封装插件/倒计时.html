@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+		<span>2</span>
+		<span>0</span>
+		<span>1</span>
+		<span>6</span>
+</body>
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	
+		timeOut(2,0,1,6)
+		function timeOut(a,b,c,d){
+			var timer = setInterval(function(){	
+				d--;
+					if(d<0){
+						d= 9;
+						c--;
+							if(c<0){
+								c = 9;
+								b--;
+									if(b<0){
+										b = 9;
+										a--;
+											if(a<0){
+												clearInterval(timer)
+												a = 0;
+												b = 0;
+												c = 0;
+												d = 0;
+											}
+									}	
+							}	
+					}
+		$('span').eq(0).html(a);
+		$('span').eq(1).html(b);
+		$('span').eq(2).html(c);
+		$('span').eq(3).html(d);
+		},100)
+		}
+		
+	
+		
+		
+</script>

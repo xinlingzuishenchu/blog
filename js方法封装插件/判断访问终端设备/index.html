@@ -1,0 +1,104 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>连飞电竞App下载</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0,viewport-fit=cover">
+    <link rel="stylesheet" href="http://img.lflyes.com/appactive/h5download/css/style.css">
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+.cnzz{
+    display:none;
+}
+</style></head>
+<body>
+    <div class="warp">
+        <div class="img_box">
+           <img src="http://img.lflyes.com/appactive/h5download/image/download.jpg" alt="连飞电竞App下载">
+        </div>
+        <div class="model hide">
+            <div class="content_box">
+                <div class="content">
+                    下载应用请点击右上角按钮选择[从浏览器打开]
+                </div>
+                <img src="http://img.lflyes.com/appactive/h5download/image/slider.png" alt="箭头">
+            </div>
+            
+        </div>
+        <div id="bottom">
+            <div class="bottom_box">
+                <img src="http://img.lflyes.com/appactive/h5download/image/download_icon.png" alt="下载">
+                <div class="bottom_text">下载连飞电竞app即可享受</div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+//判断访问终端
+var browser={
+    versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
+            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+        };
+    }(),
+    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+    var text = '';
+if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+    // alert('苹果设备');  
+    text = 'ios';
+} else if (/(Android)/i.test(navigator.userAgent)) {
+    // alert('安卓设备'); 
+    text = 'android';
+}
+
+//点击下载按钮操作
+var btn = document.getElementById('bottom');
+var model = document.getElementsByClassName("model")[0];
+    btn.onclick = function(){
+        if(text == 'ios'){
+            alert("暂不支持苹果手机下载，敬请期待！"); 
+        }else if(text == 'android'){
+            //判断是否微信打开
+            if(browser.versions.weixin){
+                // alert("微信打开"); 
+                model.className = 'model show';
+            }else{
+                // alert("普通浏览器打开下载地址....."); 
+                window.location.href ="http://img.lflyes.com/appactive/h5download/1.0.1_101_19_sign.apk";
+                
+            }
+        }
+    }
+//关闭微信model
+    model.onclick = function(){
+        model.className = 'model hide';
+    }
+
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz' id='cnzz_stat_icon_1272939984'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1272939984%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+<div id="cli_dialog_div"></div></body></html>

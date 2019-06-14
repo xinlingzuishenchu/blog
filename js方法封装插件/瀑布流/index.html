@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap{
+            width: 850px;
+            border: 1px solid red;
+        }
+        #wrap ul{
+            float: left;
+        }
+        #wrap ul li{
+            width: 200px;
+            margin: 10px 5px;
+            background: #ccc;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+    </div>
+</body>
+</html>
+<script>
+        var div = document.querySelector('#wrap');
+        var uls = document.querySelectorAll('#wrap ul');
+        var arr = [];
+        createLiFn(100)
+        function createLiFn(num){
+            //创建li
+            for(var i=0; i<num; i++){
+                var li = document.createElement('li');
+                //给li设置内容
+                li.innerHTML= i;
+                //给li设置高度(随机的高度)
+                li.style.height = fn(100,300) + 'px';
+                //存放ul的高度
+                var ulHeightArr = [];
+                //拿到所有ul的高
+                for(var j=0;j<uls.length;j++){
+                    ulHeightArr.push(uls[j].offsetHeight);
+                }
+                var minHeight = ulHeightArr[0];
+                //最短ul高度的下标
+                var minIndex=0;
+                //判断ul的高度，得出最短的ul
+                for(var k=0; k<ulHeightArr.length;k++){
+                        if(minHeight>ulHeightArr[k]){
+                            minHeight = ulHeightArr[k];
+                            minIndex = k;
+                        }
+                }
+                //插入li
+                uls[minIndex].appendChild(li);
+            }
+        }
+        //随机函数
+        function fn(min,max){
+            return parseInt(Math.random()*(max-min+1)+min);
+        }
+</script>

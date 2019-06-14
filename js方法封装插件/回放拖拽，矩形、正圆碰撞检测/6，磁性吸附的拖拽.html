@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1 { position: absolute; width: 200px; height: 200px; background: red;  }
+</style>
+</head>
+
+<body>
+<div id="div1"></div>
+
+</body>
+</html>
+
+<script>
+
+
+var oDiv = document.getElementById('div1');
+
+oDiv.onmousedown = function( ev ){
+    
+    var ev = ev || event;
+    var disX = ev.clientX - this.offsetLeft;
+    var disY = ev.clientY - this.offsetTop;
+
+    if( oDiv.setCapture ) oDiv.setCapture();
+
+    document.onmousemove = function( ev ){
+        
+        var ev = ev || event;
+        
+        var l = ev.clientX - disX;
+        var t = ev.clientY - disY;
+        
+        if( l < 100 ) l = 0;
+        if( t < 0 ) t = 0;
+        
+        if( l >= view().w - oDiv.offsetWidth ) l = view().w - oDiv.offsetWidth;
+        if( t >= view().h - oDiv.offsetHeight ) t = view().h - oDiv.offsetHeight;
+        
+        oDiv.style.left = l + 'px';
+        oDiv.style.top = t + 'px';
+        oDiv.style.cursor = 'move';
+        
+        document.title = l + ' , ' + t;
+    };
+    
+    document.onmouseup = function(){
+        if( oDiv.releaseCapture ) oDiv.releaseCapture();        
+        document.onmousemove = document.onmouseup = null;    
+    };
+    
+    return false;
+};
+
+
+function view(){
+    return {
+        w : document.documentElement.clientWidth,
+        h : document.documentElement.clientHeight    
+    }    
+}
+
+/*
+
+磁性吸附：限制 left 和 top 当距离最小值或最大值之间的差距小于一个指定值的时候，就直接让Left 或 top 等于最小值或最大值。
+
+*/
+
+</script>
+

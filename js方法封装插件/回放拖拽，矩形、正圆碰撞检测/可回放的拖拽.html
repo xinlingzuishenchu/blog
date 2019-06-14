@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#div1 { width: 100px; height: 100px; background: red; position: absolute; left: 20px; top: 20px; }
+#btn { right: 20px; top: 10px; position: absolute; }
+</style>
+</head>
+
+<body>
+
+<input type="button" value="回放" id="btn">
+<div id="div1"></div>
+
+</body>
+</html>
+
+<script>
+
+var oDiv = document.getElementById('div1');
+var oBtn = document.getElementById('btn');
+var aPos = [];// [{l:l,t:t},{},{}]
+
+
+// var oDiv = document.getElementById('div1');
+// var oBtn = document.getElementById('btn');
+// var aPos = [];  // [{l: 20, t: 30},{}]
+
+// oDiv.onmousedown = function( ev ){
+//     var ev = ev || event;
+//     var disX = ev.clientX - this.offsetLeft;
+//     var disY = ev.clientY - this.offsetTop;
+    
+//     aPos.push( {l: oDiv.offsetLeft, t: oDiv.offsetTop} );        
+    
+//     clearInterval( this.timer );
+//     this.timer = setInterval(function(){
+//         aPos.push( {l: oDiv.offsetLeft, t: oDiv.offsetTop} );        
+//     },20);
+//     document.onmousemove = function( ev ){
+//         var ev = ev || event;
+//         var l = ev.clientX - disX;
+//         var t = ev.clientY - disY;
+        
+//        // aPos.push( {l: l, t: t} );
+        
+//         oDiv.style.left = l + 'px';
+//         oDiv.style.top = t + 'px';
+//     };
+    
+//     document.onmouseup = function(){
+//         clearInterval( oDiv.timer );
+//         document.onmousemove = document.onmouseup = null;    
+//     };
+    
+//     return false;
+// };
+
+// oBtn.onclick = function(){
+    
+//     if( !aPos.length )return; 
+//     //处理数组为空（即没有拖拽或者已经回放过的情况）
+    
+//     clearInterval( this.timer );
+//     this.timer = setInterval( function(){
+//         //var tmpObj = aPos.shift();
+//         var tmpObj = aPos.pop();
+        
+//         oDiv.style.left = tmpObj.l + 'px';
+//         oDiv.style.top = tmpObj.t + 'px';
+        
+//         if( !aPos.length )clearInterval( oBtn.timer );
+        
+//     }, 30 );    
+    
+// };
+
+</script>
+
+
+

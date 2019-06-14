@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+	作者：jiaguangfei
+	时间：2017-03-10
+	描述：兼容IE的动态菜单样式
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- 通用样式 -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/public.css"/> -->
+		<!-- 动态菜单CSS -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/menu.css"/> -->
+		<link rel="stylesheet" href="css/reset.css">
+		<!-- jquery引入 -->
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<!-- 动态菜单JS -->
+		<script type="text/javascript" src="js/menu.js"></script>
+		<title>兼容IE的动态菜单样式</title>
+		<style>
+		.middle{
+	width: 1200px;
+	margin: 0px auto;
+}
+			body{background-color: #f0f3f4}
+			.middle .leftMenu{
+				width:170px;
+				height:560px;
+				background-color: #515151;
+				float: left;
+			}
+			.menu_list {
+				width:100%;
+			}
+			.menu_list .clear{height:56px;}
+			#home{
+				width:170px;
+				float: left;
+				color:#fff;
+			    font-size:18px;
+			    height:60px;
+			    line-height:60px;
+			    text-indent: 54px;
+			}
+			.home{height:60px;background:url('img/1.png') 10px 19px no-repeat;}
+.menu_list ul li .fuMenu{
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	height:56px;
+	line-height:56px;
+	text-indent: 54px;
+	width:170px;
+	float: left;
+}
+.menu_list ul li .div1 {
+	width: 100%;
+	height: auto;
+	float: left;
+	display: none;
+	background:#f9f9f9;
+	overflow:hidden;
+}
+.zcd{
+	width:170px;
+	color: #515151;
+	font-size:16px;
+	height:16px;
+	line-height:16px;
+	margin:12px 0;
+	text-indent: 54px;
+	cursor:pointer;
+}
+.menu_list ul li .div1 .zcd:hover{ color:#1cc3ac;}
+.removes{
+	width: 166px;
+    text-indent: 50px;
+	color: #1cc3ac;
+	border-left:4px solid #1cc3ac;
+}
+		</style>
+	</head>
+	<body>
+		<div class="middle">
+			<div class="leftMenu">
+				<div class="menu_list">
+					<ul>
+						<li class="home clear">
+							<a id="home" href="###">首页</a>
+							
+						</li>
+						<li class="clear">
+							<p class="fuMenu" style="background:url('img/2.png') 10px 17px no-repeat;">营销管理</p>
+							<div class="div1">
+								<p class="zcd" id="zcd9">促销管理</p>
+								<p class="zcd" id="zcd10">报价管理</p>
+								<p class="zcd" id="zcd11">会员管理</p>
+							</div>
+						</li>
+						<li class="clear">
+							<p class="fuMenu" style="background:url('img/3.png') 10px 17px no-repeat;">线索管理</p>
+							<div class="div1">
+								<p class="zcd" id="zcd19">全部线索查询</p>
+								<p class="zcd" id="zcd20">待联系线索</p>
+							</div>
+						</li>
+						<li class="clear">
+							<p class="fuMenu" style="background:url('img/4.png') 10px 17px no-repeat;">云账号</p>
+							<div class="div1">
+								<p class="zcd" id="zcd19">积分查询</p>
+								<p class="zcd" id="zcd20">价格监控</p>
+								<p class="zcd" id="zcd20">云账号</p>
+							</div>
+						</li>
+						<li class="clear">
+							<p class="fuMenu" style="background:url('img/5.png') 10px 17px no-repeat;">系统管理</p>
+							<div class="div1">
+								<p class="zcd" id="zcd19">账号信息</p>
+								<p class="zcd" id="zcd20">修改密码</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
