@@ -13,15 +13,15 @@ keywords: vue
 <head>
     <meta charset="UTF-8">
     <title>Vue</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div id="app">
-      <div>{{ fullName }}</div>
-      <button v-on:click = "btn">点击改变数据</button>
-    </div>
-
-</body>
+    <link rel="stylesheet" href="css/style.css">\
+</head>\
+<body>\
+    <div id="app">\
+      <div>{{ fullName }}</div>\
+      <button v-on:click = "btn">点击改变数据</button>\
+    </div>\
+\
+</body>\
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
 var vm = new Vue({
