@@ -75,6 +75,18 @@ function identityValidate(value) {
 
 ```
 
+## 3.地址栏截取参数
+
+```javascript
+//name是要获取的参数名
+var str = getQueryString(name);
+function getQueryString(name){
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+```
 
 
 
