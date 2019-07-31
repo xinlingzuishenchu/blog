@@ -9,6 +9,8 @@ tags: javaScript
 
 ```javascript
 
+console.log( date_time() ) // 结果: 2018年4月4日星期三14点48分20秒
+
 function date_time (){
     var oDate = new Date(); //Wed Apr 04 2018 12:13:11 GMT+0800 (中国标准时间)
     var iYear = oDate.getFullYear(); //2016
@@ -25,7 +27,49 @@ function date_time (){
     return time
 }
 
-console.log( date_time() ) // 结果: 2018年4月4日星期三14点48分20秒
+//获取今天日期，格式YYYY-MM-DD
+function getNowFormatDate() {
+  var date = new Date();
+  var seperator1 = "-";
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var strDate = date.getDate();
+  if (month >= 1 && month <= 9) {
+    month = "0" + month;
+  }
+  if (strDate >= 0 && strDate <= 9) {
+    strDate = "0" + strDate;
+  }
+  var currentdate = year + seperator1 + month + seperator1 + strDate;
+  return currentdate;
+}
+
+//一年后的今天的前一天,格式YYYY-MM-DD
+function oneYearPast(){
+    var time=new Date();
+    var year=time.getFullYear()+1;
+    var month=time.getMonth()+1;
+    var day=time.getDate();
+    console.log(month);
+    if(month<10){
+        month="0"+month;
+    }
+    if(day>1){
+        day = day-1;
+    }else{
+        month = month-1;
+        console.log(month);
+        if(month<10){
+            month="0"+month;
+        }
+        if(month==0){
+            month = 12;
+        }
+        day=new Date(year,month,0).getDate();
+    }
+    var v2=year+'-'+month+'-'+day;
+    return v2;      
+}
 
 ```
 
