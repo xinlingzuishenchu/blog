@@ -306,6 +306,15 @@ function clearNoNum(obj){
 }
 ```
 
+## 12. iframe相关方法
+
+```javascript
+//子iframe里面获取父级元素
+    parent.$('#dom')
+//获取iframe里面的方法,dom是iframe的id,fun是iframe里面的方法
+    $('#dom')[0].contentWindow.fun();
+```
+
 
 
 
