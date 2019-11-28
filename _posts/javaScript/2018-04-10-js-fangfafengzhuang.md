@@ -146,6 +146,32 @@ function formatDate(date) {
     return (myyear + "-" + mymonth + "-" + myweekday);  
 }
 
+
+//时间戳转时间
+function formatDate(time){
+    let date = new Date(time * 1000);
+    let fmt = 'yyyy.MM.dd';
+    if(/(y+)/.test(fmt)) { // 年
+      let year = date.getFullYear().toString();
+      fmt = fmt.replace(RegExp.$1, year);
+    }
+    if(/(M+)/.test(fmt)) { // 月
+      let mouth = date.getMonth() + 1;
+      if(mouth < 10) {
+        mouth = '0' + mouth;
+      }
+      fmt = fmt.replace(RegExp.$1, mouth);
+    }
+    if(/(d+)/.test(fmt)) { // 日
+      let mydate = date.getDate();
+      if(mydate < 10) {
+        mydate = '0' + mydate;
+      }
+      fmt = fmt.replace(RegExp.$1, mydate);
+    }
+    return fmt;
+}
+
 ```
 
 ## 3. 获取滚动条与窗口的距离
