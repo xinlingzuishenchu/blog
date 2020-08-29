@@ -20,7 +20,7 @@
     var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器
     var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
     if (isIE) {
-        var IE5 = IE55 = IE6 = IE7 = IE8 = IE9 = false;
+        var IE5 = IE55 = IE6 = IE7 = IE8 = IE9 = IE10 = false;
         var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
         reIE.test(userAgent);
         var fIEVersion = parseFloat(RegExp["$1"]);
@@ -29,6 +29,7 @@
         IE7 = fIEVersion == 7.0;
         IE8 = fIEVersion == 8.0;
         IE9 = fIEVersion == 9.0;
+        IE10 = fIEVersion == 10.0;
         if (IE55) {
             return "IE55";
         }
@@ -43,6 +44,9 @@
         }
         if (IE9) {
             return "IE9";
+        }
+        if (IE10) {
+            return "IE10";
         }
     }//isIE end
     if (isChrome) {
@@ -74,19 +78,22 @@ if (myBrowser() == "Opera") {
     alert("我是 Opera");
 }
 if (myBrowser() == "IE55") {
-    alert("您的浏览器版本太低，请您升级浏览器！");
+    alert("IE55您的浏览器版本太低，请您升级浏览器！");
 }
 if (myBrowser() == "IE6") {
-    alert("您的浏览器版本太低，请您升级浏览器！");
+    alert("IE6您的浏览器版本太低，请您升级浏览器！");
 }
 if (myBrowser() == "IE7") {
-    alert("您的浏览器版本太低，请您升级浏览器！");
+    alert("IE7您的浏览器版本太低，请您升级浏览器！");
 }
 if (myBrowser() == "IE8") {
-    alert("您的浏览器版本太低，请您升级浏览器！");
+    alert("IE8您的浏览器版本太低，请您升级浏览器！");
 }
 if (myBrowser() == "IE9") {
-    alert("您的浏览器版本太低，请您升级浏览器！");
+    alert("IE9您的浏览器版本太低，请您升级浏览器！");
+}
+if (myBrowser() == "IE10") {
+    alert("IE10您的浏览器版本太低，请您升级浏览器！");
 }
 </script>
 
